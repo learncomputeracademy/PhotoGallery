@@ -54,6 +54,7 @@ class PhotoGallery{
 			}	
 		});
 		const data = await response.json();
+		console.log(data)
 		return data;
 	}
 
@@ -66,7 +67,7 @@ class PhotoGallery{
 			item.innerHTML = `
 				    <a href="${photo.src.original}" target="_blank">
 				    	<div class="card">
-					        <img src="${photo.src.medium}" alt="..." class="img-fluid" />
+					        <img src="${photo.src.large}" alt="..." class="img-fluid"/>
 					        <div class="card-body">
 					            <h5 class="card-title">Photographer: <b>${photo.photographer}</b></h5>
 					        </div>
@@ -93,7 +94,7 @@ class PhotoGallery{
 
 
 	async getMoreSearchImages(index){
-		const baseURL = await `https://api.pexels.com/v1/search?query=${this.searchValueGlobal}&page=${index}&per_page=12`;
+		const baseURL = await `https://api.pexels.com/v1/search?query=${this.searchValueGlobal}&page=${index}&per_page=24`;
 		const data = await this.fetchImages(baseURL);
 		this.GenerateHTML(data.photos);
 	}
