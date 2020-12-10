@@ -136,7 +136,7 @@ header form .btn-dark{
 }
 .card {
     line-height: 0;
-    background: #ffffff;
+    background-color: #ffffff;
     position: relative;
     overflow: hidden;
 }

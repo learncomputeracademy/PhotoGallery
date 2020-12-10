@@ -66,7 +66,7 @@ class PhotoGallery{
 
 			item.innerHTML = `
 				    <a href="${photo.src.original}" target="_blank">
-				    	<div class="card">
+				    	<div class="card" style="background-image: url(../loader.gif); background-size: auto; background-repeat: no-repeat; background-position: center; min-height: 100px;">
 					        <img src="${photo.src.large}" alt="..." class="img-fluid"/>
 					        <div class="card-body">
 					            <h5 class="card-title">Photographer: <b>${photo.photographer}</b></h5>
