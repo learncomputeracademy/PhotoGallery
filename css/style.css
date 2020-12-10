@@ -228,7 +228,7 @@ header form .btn-dark{
 
 @media only screen and (max-width: 500px) {
     body{
-        padding: 50px;
+        padding: 30px;
     }
     .row {
         columns: 2;
